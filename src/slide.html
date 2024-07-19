@@ -1,0 +1,35 @@
+<div class="swiper-slide">
+    <div class="product">
+        
+      <img src="{{image}}" alt="{{img}}">
+      <div class="favorite-container">
+        <span class="favorite-icon" title="Add to Favorites" onclick="toggleFavorite(this)">&#9825;</span>
+      </div>
+
+      <div class="product-details">
+        <a href="{{link}}" target="_blank">
+          <p class="product-name">{{name}}</p>
+        </a>
+        <div class="product-prices">
+          <p class="product-original-price">{{original_price}} €</p>
+          <p class="product-discounted-price">{{discounted_price}} €</p>
+        </div>
+        
+        <div class="quantity-add-to-cart">
+          <div class="quantity-container">
+            <label for="quantity">Amount:</label>
+            <div class="quantity-box">
+              <button onclick="decreaseQuantity(this)">-</button>
+              <input id="quantity" type="number" value="1" min="1">
+              <button onclick="increaseQuantity(this)">+</button>
+            </div>
+          </div>
+          <button class="add-to-cart-btn">
+            Add to Cart
+          </button>
+        </div>
+      
+      </div>
+    </div>
+  </div>
+  
