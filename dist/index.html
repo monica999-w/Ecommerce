@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vite Project</title>
+  <script type="module" crossorigin src="/assets/index-B3uZ2xuZ.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-DKlsu3SN.css">
+</head>
+<body>
+  <!-- Swiper container -->
+  <div class="swiper-container">
+    <div class="swiper-wrapper"></div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+    <!-- Add Navigation -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+
+  <script>
+
+    function decreaseQuantity(button) {
+      const input = button.nextElementSibling;
+      if (input.value > 1) {
+        input.value = parseInt(input.value) - 1;
+      }
+    }
+
+    function increaseQuantity(button) {
+      const input = button.previousElementSibling;
+      input.value = parseInt(input.value) + 1;
+    }
+
+    function toggleFavorite(icon) {
+    icon.classList.toggle('active'); 
+
+  }
+    
+  </script>
+</body>
+</html>
