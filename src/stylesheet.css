@@ -52,8 +52,13 @@ body {
     color: #f00; 
   }
   
+  .product-img-container {
+    position: relative; 
+    overflow: hidden;  
+  }
+  
   .product img {
-    width: 50%;
+    width: 100%;
     height: auto;
     max-height: 100%;
     object-fit: contain;
@@ -70,7 +75,10 @@ body {
     flex-direction: column;
     height: 100%;
     text-align: left;
+    margin: 20px;
+    
   }
+  
   
   .product-details a {
     text-decoration: none;
@@ -88,16 +96,25 @@ body {
   }
   
   .product-original-price {
-    text-decoration: line-through;
     color: #000000;
     font-size: 18px;
     margin-bottom: 5px;
   }
+ 
   
   .product-discounted-price {
     font-size: 28px;
     font-weight: bold;
     color: #ff0000;
+  }
+
+  .line-through {
+    text-decoration: line-through;
+  }
+  
+  
+  .hidden {
+    display: none;
   }
   
   .quantity-add-to-cart {

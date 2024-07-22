@@ -14,12 +14,18 @@ async function loadSlides() {
   console.log('Template HTML:', template);
 
   products.forEach(product => {
+    // Determine if the discounted price should be visible
+    const discountedPriceClass = product.discounted_price ? '' : 'hidden';
+    const originalPriceClass = product.discounted_price ? 'line-through' : '';
+
     let slideHTML = template
       .replace(/{{link}}/g, product.link)
       .replace(/{{image}}/g, product.image)
       .replace(/{{name}}/g, product.name)
       .replace(/{{original_price}}/g, product.original_price ? product.original_price.toFixed(2) : 'N/A')
-      .replace(/{{discounted_price}}/g, product.discounted_price ? product.discounted_price.toFixed(2) : ' ');
+      .replace(/{{discounted_price}}/g, product.discounted_price ? product.discounted_price.toFixed(2) : '')
+      .replace(/{{discounted_price_class}}/g, discountedPriceClass)
+      .replace(/{{original_price_class}}/g, originalPriceClass);
 
     slidesContainer.insertAdjacentHTML('beforeend', slideHTML);
   });
